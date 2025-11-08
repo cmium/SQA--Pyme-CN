@@ -8,12 +8,73 @@ class UsuarioController {
         $this->usuarioModel = new Usuario();
     }
     
+    /**
+     * Detectar si es petición AJAX
+     */
+    private function isAjaxRequest() {
+        return !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+               strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' ||
+               !empty($_GET['ajax']) || 
+               (!empty($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false);
+    }
+    
+    /**
+     * Enviar respuesta JSON
+     */
+    private function sendJsonResponse($success, $data = null, $message = '') {
+        header('Content-Type: application/json');
+        echo json_encode([
+            'success' => $success,
+            'message' => $message,
+            'data' => $data
+        ]);
+        exit;
+    }
+    
     public function listar() {
         try {
             $usuarios = $this->usuarioModel->obtenerTodos();
+            
+            if ($this->isAjaxRequest()) {
+                $this->sendJsonResponse(true, $usuarios, 'Usuarios obtenidos exitosamente');
+            }
+            
             return $usuarios;
         } catch (Exception $e) {
+            if ($this->isAjaxRequest()) {
+                $this->sendJsonResponse(false, null, $e->getMessage());
+            }
             throw new Exception("Error al listar usuarios: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Obtener usuario por ID (para AJAX)
+     */
+    public function obtener() {
+        try {
+            $id = intval($_GET['id'] ?? 0);
+            
+            if ($id <= 0) {
+                throw new Exception("ID de usuario inválido");
+            }
+            
+            $usuario = $this->usuarioModel->obtenerPorId($id);
+            
+            if (!$usuario) {
+                throw new Exception("Usuario no encontrado");
+            }
+            
+            if ($this->isAjaxRequest()) {
+                $this->sendJsonResponse(true, $usuario, 'Usuario obtenido exitosamente');
+            }
+            
+            return $usuario;
+        } catch (Exception $e) {
+            if ($this->isAjaxRequest()) {
+                $this->sendJsonResponse(false, null, $e->getMessage());
+            }
+            throw $e;
         }
     }
     
@@ -47,14 +108,21 @@ class UsuarioController {
                     throw new Exception("El email ya está registrado");
                 }
                 
-                // Crear usuario
-                $hashedPassword = password_hash($password, PASSWORD_BCRYPT, ['cost' => 10]);
-                $this->usuarioModel->crear($nombre, $email, $hashedPassword, $rol);
+                // Crear usuario (el modelo se encarga de hashear la contraseña)
+                $id = $this->usuarioModel->crear($nombre, $email, $password, $rol);
+                
+                if ($this->isAjaxRequest()) {
+                    $usuario = $this->usuarioModel->obtenerPorId($id);
+                    $this->sendJsonResponse(true, $usuario, "Usuario creado exitosamente");
+                }
                 
                 $_SESSION['mensaje'] = "Usuario creado exitosamente";
                 header("Location: ?page=usuarios");
                 exit;
             } catch (Exception $e) {
+                if ($this->isAjaxRequest()) {
+                    $this->sendJsonResponse(false, null, $e->getMessage());
+                }
                 return $e->getMessage();
             }
         }
@@ -89,10 +157,18 @@ class UsuarioController {
                 
                 $this->usuarioModel->actualizar($id, $nombre, $email, $rol);
                 
+                if ($this->isAjaxRequest()) {
+                    $usuario = $this->usuarioModel->obtenerPorId($id);
+                    $this->sendJsonResponse(true, $usuario, "Usuario actualizado exitosamente");
+                }
+                
                 $_SESSION['mensaje'] = "Usuario actualizado exitosamente";
                 header("Location: ?page=usuarios");
                 exit;
             } catch (Exception $e) {
+                if ($this->isAjaxRequest()) {
+                    $this->sendJsonResponse(false, null, $e->getMessage());
+                }
                 return $e->getMessage();
             }
         }
@@ -137,23 +213,31 @@ class UsuarioController {
     
     public function eliminar() {
         try {
-            $id = intval($_GET['id'] ?? 0);
+            $id = intval($_GET['id'] ?? $_POST['id'] ?? 0);
             
             if ($id <= 0) {
                 throw new Exception("ID de usuario inválido");
             }
             
             // No permitir eliminar el usuario admin actual
-            if ($id === $_SESSION['usuario_id'] ?? null) {
+            $currentUserId = $_SESSION['usuario_id'] ?? $_SESSION['user_id'] ?? null;
+            if ($id == $currentUserId) {
                 throw new Exception("No puedes eliminar tu propio usuario");
             }
             
             $this->usuarioModel->eliminar($id);
             
+            if ($this->isAjaxRequest()) {
+                $this->sendJsonResponse(true, null, "Usuario eliminado exitosamente");
+            }
+            
             $_SESSION['mensaje'] = "Usuario eliminado exitosamente";
             header("Location: ?page=usuarios");
             exit;
         } catch (Exception $e) {
+            if ($this->isAjaxRequest()) {
+                $this->sendJsonResponse(false, null, $e->getMessage());
+            }
             return $e->getMessage();
         }
     }

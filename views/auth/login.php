@@ -95,33 +95,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && $_GET['ac
                 <form method="POST" action="?page=login&action=procesar_login" id="loginForm" novalidate>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <div class="input-wrapper">
-                            <span class="input-icon">✉️</span>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                required 
-                                value="<?php echo htmlspecialchars($email ?? ''); ?>"
-                                placeholder="tu@email.com"
-                                class="form-input"
-                            >
-                        </div>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            value="<?php echo htmlspecialchars($email ?? ''); ?>"
+                            placeholder="tu@email.com"
+                            class="form-input"
+                        >
                     </div>
                     
                     <div class="form-group">
                         <label for="contrasena">Contraseña</label>
-                        <div class="input-wrapper">
-                            <span class="input-icon">🔒</span>
-                            <input 
-                                type="password" 
-                                id="contrasena" 
-                                name="contrasena" 
-                                required
-                                placeholder="••••••••"
-                                class="form-input"
-                            >
-                        </div>
+                        <input 
+                            type="password" 
+                            id="contrasena" 
+                            name="contrasena" 
+                            required
+                            placeholder="••••••••"
+                            class="form-input"
+                        >
                     </div>
                     
                     <button type="submit" class="btn btn-login" id="submitBtn">

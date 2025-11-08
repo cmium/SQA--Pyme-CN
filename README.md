@@ -275,8 +275,6 @@ inventario_pyme/
 - **SQAP.md** - Plan completo de aseguramiento de calidad
 - **README** - Información general del proyecto
 
-
-
 1. ✅ Descargar código
 2. ✅ Copiar a htdocs de XAMPP
 3. ✅ Crear BD y ejecutar scripts SQL

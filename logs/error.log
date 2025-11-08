@@ -351,3 +351,137 @@
 [07-Nov-2025 07:24:14 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
 [07-Nov-2025 07:24:14 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
 [07-Nov-2025 07:24:14 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:24:24 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:24:25 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:24:25 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:24:32 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:24:32 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:24:32 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:27:48 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:27:48 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:27:48 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:27:50 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:27:53 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:27:55 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:28:07 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:28:08 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:28:15 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:28:19 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:28:21 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:28:44 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:28:46 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:28:46 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:40:27 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:40:29 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:07 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:08 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:09 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:09 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:09 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:09 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:45:12 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:12 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:12 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:13 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:45:13 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:46:53 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:46:53 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:46:54 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:46:54 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:15 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:16 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:22 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:22 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:22 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:47:25 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:26 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:26 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:27 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:28 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:29 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:30 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:33 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:35 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:35 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:35 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:47:42 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:47:42 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:48:33 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:48:33 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:48:34 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:48:34 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:48:36 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:48:36 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:48:36 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:49:04 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:04 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:04 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:06 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:06 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:06 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:49:11 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:11 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:11 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:12 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:12 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:18 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:21 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:21 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:25 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:25 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:25 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:49:31 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:31 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:31 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:32 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:32 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:54 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:54 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:49:54 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:50:04 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:50:04 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:50:05 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:50:05 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:50:11 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:50:11 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:50:13 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:50:13 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:50:13 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:50:14 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:50:14 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:50:14 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:51:20 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:51:20 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:51:22 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:51:22 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:53:46 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:53:46 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:54:47 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:54:47 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:55:23 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:55:23 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:55:32 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:55:32 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:55:32 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:26 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:30 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:31 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:33 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:33 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:33 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:56:42 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:42 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:42 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:44 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:44 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:52 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:55 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:55 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:56 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:56 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:56 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\inventario_pyme\views\auth\login.php on line 2
+[08-Nov-2025 03:56:58 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:58 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:56:58 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:57:00 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73
+[08-Nov-2025 03:57:03 Europe/Berlin] PHP Warning:  The magic method Database::__wakeup() must have public visibility in C:\xampp\htdocs\inventario_pyme\config\database.php on line 73

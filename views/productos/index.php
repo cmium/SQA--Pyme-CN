@@ -40,7 +40,7 @@
                 <tr class="<?php echo ($producto['stock_actual'] <= $producto['stock_minimo']) ? 'stock-bajo' : ''; ?>">
                     <td><?php echo htmlspecialchars($producto['sku']); ?></td>
                     <td><?php echo htmlspecialchars($producto['nombre']); ?></td>
-                    <td>$<?php echo number_format($producto['precio_unitario'], 2); ?></td>
+                    <td>Q<?php echo number_format($producto['precio_unitario'], 2); ?></td>
                     <td><?php echo $producto['stock_actual']; ?></td>
                     <td><?php echo $producto['stock_minimo']; ?></td>
                     <td><?php echo htmlspecialchars($producto['proveedor'] ?? 'N/A'); ?></td>

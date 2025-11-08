@@ -67,46 +67,61 @@ try {
             break;
         
         case 'usuarios':
-            if ($_SESSION['usuario_rol'] !== 'admin') {
+            // Verificar permisos - usar ambas variables de sesión por compatibilidad
+            $userRole = $_SESSION['usuario_rol'] ?? $_SESSION['user_role'] ?? 'empleado';
+            if ($userRole !== 'admin') {
                 $error = 'No tienes permisos para acceder a esta sección';
                 require VIEWS_PATH . '/layout/error.php';
             } else {
                 require CONTROLLERS_PATH . '/UsuarioController.php';
                 $usuarioController = new UsuarioController();
                 
-                // Procesar acciones POST sin redireccionar fuera del frame
+                // Manejar acciones GET (AJAX)
+                if ($_SERVER['REQUEST_METHOD'] === 'GET' && !empty($action)) {
+                    try {
+                        if ($action === 'obtener') {
+                            $usuarioController->obtener();
+                        } elseif ($action === 'listar') {
+                            $usuarioController->listar();
+                        } elseif ($action === 'eliminar') {
+                            $usuarioController->eliminar();
+                        }
+                    } catch (Exception $e) {
+                        header('Content-Type: application/json');
+                        echo json_encode(['success' => false, 'message' => $e->getMessage()]);
+                        exit;
+                    }
+                }
+                
+                // Procesar acciones POST
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $accion = $_POST['accion'] ?? '';
                     try {
                         if ($accion === 'crear') {
                             $resultado = $usuarioController->crear();
-                            if ($resultado) {
+                            if ($resultado && !isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
                                 $_SESSION['error'] = $resultado;
-                            } else {
-                                $_SESSION['mensaje'] = "Usuario creado exitosamente";
                             }
                         } elseif ($accion === 'editar') {
                             $resultado = $usuarioController->editar();
-                            if ($resultado) {
+                            if ($resultado && !isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
                                 $_SESSION['error'] = $resultado;
-                            } else {
-                                $_SESSION['mensaje'] = "Usuario actualizado exitosamente";
                             }
                         } elseif ($accion === 'cambiar_contrasena') {
                             $resultado = $usuarioController->cambiarContrasena();
-                            if ($resultado) {
+                            if ($resultado && !isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
                                 $_SESSION['error'] = $resultado;
                             }
                         } elseif ($accion === 'eliminar') {
                             $resultado = $usuarioController->eliminar();
-                            if ($resultado) {
+                            if ($resultado && !isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
                                 $_SESSION['error'] = $resultado;
-                            } else {
-                                $_SESSION['mensaje'] = "Usuario eliminado exitosamente";
                             }
                         }
                     } catch (Exception $e) {
-                        $_SESSION['error'] = $e->getMessage();
+                        if (!isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
+                            $_SESSION['error'] = $e->getMessage();
+                        }
                     }
                 }
                 
