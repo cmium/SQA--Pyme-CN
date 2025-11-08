@@ -1,0 +1,12 @@
+# Permitir acceso a archivos y carpetas estáticas
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /inventario_pyme/public/
+    
+    # No reescribir si es un archivo o carpeta real
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Reescribir a index.php
+    RewriteRule ^(.*)$ index.php [L,QSA]
+</IfModule>

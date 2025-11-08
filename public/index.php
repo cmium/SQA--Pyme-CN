@@ -1,0 +1,125 @@
+<?php
+/**
+ * Punto de entrada principal
+ * SQA: Enrutador seguro
+ */
+
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__DIR__) . '/logs/error.log');
+
+if (!is_dir(dirname(__DIR__) . '/logs')) {
+    mkdir(dirname(__DIR__) . '/logs', 0755, true);
+}
+
+// Cargar configuración y clases
+require_once dirname(__DIR__) . '/config/database.php';
+require_once dirname(__DIR__) . '/models/Usuario.php';
+require_once dirname(__DIR__) . '/models/Producto.php';
+require_once dirname(__DIR__) . '/models/Inventario.php';
+
+// Configurar sesión segura (solo una vez)
+if (session_status() === PHP_SESSION_NONE) {
+    ini_set('session.use_only_cookies', 1);
+    ini_set('session.use_strict_mode', 1);
+    ini_set('session.cookie_httponly', SESSION_HTTPONLY);
+    ini_set('session.cookie_samesite', SESSION_SAMESITE);
+    session_start();
+}
+
+// Verificar autenticación (excepto en login)
+$page = $_GET['page'] ?? 'dashboard';
+$action = $_GET['action'] ?? '';
+
+if ($page !== 'login' && !isset($_SESSION['usuario_id'])) {
+    header('Location: ?page=login');
+    exit;
+}
+
+// Verificar timeout de sesión
+if (isset($_SESSION['login_time']) && (time() - $_SESSION['login_time'] > SESSION_LIFETIME)) {
+    session_destroy();
+    header('Location: ?page=login&expired=1');
+    exit;
+}
+
+try {
+    switch ($page) {
+        case 'login':
+            require CONTROLLERS_PATH . '/AuthController.php';
+            break;
+            
+        case 'dashboard':
+            require VIEWS_PATH . '/dashboard/index.php';
+            break;
+            
+        case 'productos':
+            require CONTROLLERS_PATH . '/ProductoController.php';
+            break;
+            
+        case 'inventario':
+            require CONTROLLERS_PATH . '/InventarioController.php';
+            break;
+            
+        case 'movimientos':
+            require CONTROLLERS_PATH . '/InventarioController.php';
+            break;
+        
+        case 'usuarios':
+            if ($_SESSION['usuario_rol'] !== 'admin') {
+                $error = 'No tienes permisos para acceder a esta sección';
+                require VIEWS_PATH . '/layout/error.php';
+            } else {
+                require CONTROLLERS_PATH . '/UsuarioController.php';
+                $usuarioController = new UsuarioController();
+                
+                // Procesar acciones POST sin redireccionar fuera del frame
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $accion = $_POST['accion'] ?? '';
+                    try {
+                        if ($accion === 'crear') {
+                            $resultado = $usuarioController->crear();
+                            if ($resultado) {
+                                $_SESSION['error'] = $resultado;
+                            } else {
+                                $_SESSION['mensaje'] = "Usuario creado exitosamente";
+                            }
+                        } elseif ($accion === 'editar') {
+                            $resultado = $usuarioController->editar();
+                            if ($resultado) {
+                                $_SESSION['error'] = $resultado;
+                            } else {
+                                $_SESSION['mensaje'] = "Usuario actualizado exitosamente";
+                            }
+                        } elseif ($accion === 'cambiar_contrasena') {
+                            $resultado = $usuarioController->cambiarContrasena();
+                            if ($resultado) {
+                                $_SESSION['error'] = $resultado;
+                            }
+                        } elseif ($accion === 'eliminar') {
+                            $resultado = $usuarioController->eliminar();
+                            if ($resultado) {
+                                $_SESSION['error'] = $resultado;
+                            } else {
+                                $_SESSION['mensaje'] = "Usuario eliminado exitosamente";
+                            }
+                        }
+                    } catch (Exception $e) {
+                        $_SESSION['error'] = $e->getMessage();
+                    }
+                }
+                
+                require VIEWS_PATH . '/usuarios/index.php';
+            }
+            break;
+            
+        default:
+            require VIEWS_PATH . '/dashboard/index.php';
+    }
+} catch (Exception $e) {
+    error_log('Error en enrutamiento: ' . $e->getMessage());
+    $error = 'Ocurrió un error: ' . $e->getMessage();
+    require VIEWS_PATH . '/layout/error.php';
+}
+?>
