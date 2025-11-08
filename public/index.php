@@ -51,6 +51,14 @@ try {
             break;
             
         case 'dashboard':
+            require CONTROLLERS_PATH . '/DashboardController.php';
+            $dashboardController = new DashboardController();
+            
+            // Si es petición AJAX para obtener datos de gráficas
+            if (isset($_GET['action']) && $_GET['action'] === 'datos_graficas') {
+                $dashboardController->obtenerDatosGraficas();
+            }
+            
             require VIEWS_PATH . '/dashboard/index.php';
             break;
             
@@ -126,6 +134,30 @@ try {
                 }
                 
                 require VIEWS_PATH . '/usuarios/index.php';
+            }
+            break;
+            
+        case 'reportes':
+            require CONTROLLERS_PATH . '/ReporteController.php';
+            $reporteController = new ReporteController();
+            
+            $action = $_GET['action'] ?? '';
+            $tipo = $_GET['tipo'] ?? '';
+            
+            if ($action === 'generar') {
+                if ($tipo === 'pdf') {
+                    $reporteController->generarPDF();
+                } elseif ($tipo === 'excel') {
+                    $reporteController->generarExcel();
+                } else {
+                    $_SESSION['error'] = 'Tipo de reporte inválido';
+                    header('Location: ?page=dashboard');
+                    exit;
+                }
+            } else {
+                $_SESSION['error'] = 'Acción no válida';
+                header('Location: ?page=dashboard');
+                exit;
             }
             break;
             

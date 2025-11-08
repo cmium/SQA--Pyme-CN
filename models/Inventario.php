@@ -172,5 +172,34 @@ class Inventario {
             $_SERVER['REMOTE_ADDR'] ?? 'N/A'
         ]);
     }
+    
+    /**
+     * Obtener estadísticas de movimientos
+     */
+    public function obtenerEstadisticasMovimientos($dias = 30) {
+        $stats = [];
+        
+        // Total de movimientos en el período
+        $stmt = $this->db->prepare("SELECT COUNT(*) as total FROM {$this->table} WHERE fecha_movimiento >= DATE_SUB(NOW(), INTERVAL ? DAY)");
+        $stmt->execute([$dias]);
+        $stats['total_movimientos'] = $stmt->fetch()['total'];
+        
+        // Entradas vs Salidas
+        $stmt = $this->db->prepare("SELECT tipo_movimiento, COUNT(*) as cantidad, SUM(cantidad) as total_cantidad FROM {$this->table} WHERE fecha_movimiento >= DATE_SUB(NOW(), INTERVAL ? DAY) GROUP BY tipo_movimiento");
+        $stmt->execute([$dias]);
+        $stats['entradas_salidas'] = $stmt->fetchAll();
+        
+        // Movimientos por día (últimos 7 días)
+        $stmt = $this->db->prepare("SELECT DATE(fecha_movimiento) as fecha, COUNT(*) as cantidad FROM {$this->table} WHERE fecha_movimiento >= DATE_SUB(NOW(), INTERVAL 7 DAY) GROUP BY DATE(fecha_movimiento) ORDER BY fecha ASC");
+        $stmt->execute();
+        $stats['movimientos_por_dia'] = $stmt->fetchAll();
+        
+        // Top 5 productos con más movimientos
+        $stmt = $this->db->prepare("SELECT p.nombre, COUNT(*) as cantidad FROM {$this->table} m JOIN productos p ON m.producto_id = p.id WHERE m.fecha_movimiento >= DATE_SUB(NOW(), INTERVAL ? DAY) GROUP BY m.producto_id, p.nombre ORDER BY cantidad DESC LIMIT 5");
+        $stmt->execute([$dias]);
+        $stats['top_productos'] = $stmt->fetchAll();
+        
+        return $stats;
+    }
 }
 ?>
