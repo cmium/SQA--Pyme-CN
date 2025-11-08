@@ -50,7 +50,7 @@ Sistema web completo de gestión de inventario para pequeñas y medianas empresa
 
 ## Estructura de Carpetas
 
-\`\`\`
+
 inventario_pyme/
 ├── public/                          # Carpeta pública (acceso web)
 │   ├── index.php                    # Punto de entrada principal
@@ -104,12 +104,12 @@ inventario_pyme/
 │
 ├── README.md                        # Este archivo
 
-\`\`\`
+
 
 ## 🗄️ Esquema Base de Datos
 
 ### Tabla: usuarios
-\`\`\`sql
+
 - id INT PRIMARY KEY
 - nombre VARCHAR(100) NOT NULL
 - email VARCHAR(100) UNIQUE NOT NULL
@@ -117,10 +117,10 @@ inventario_pyme/
 - rol ENUM('admin', 'empleado') DEFAULT 'empleado'
 - estado ENUM('activo', 'inactivo') DEFAULT 'activo'
 - fecha_creacion, fecha_actualizacion TIMESTAMP
-\`\`\`
+
 
 ### Tabla: productos
-\`\`\`sql
+
 - id INT PRIMARY KEY
 - nombre VARCHAR(150) NOT NULL
 - sku VARCHAR(50) UNIQUE NOT NULL (código único)
@@ -132,10 +132,10 @@ inventario_pyme/
 - categoria VARCHAR(50)
 - estado ENUM('activo', 'inactivo') DEFAULT 'activo'
 - fecha_creacion, fecha_actualizacion TIMESTAMP
-\`\`\`
+
 
 ### Tabla: movimientos_inventario
-\`\`\`sql
+
 - id INT PRIMARY KEY
 - producto_id INT FK
 - usuario_id INT FK
@@ -146,20 +146,20 @@ inventario_pyme/
 - motivo VARCHAR(200)
 - referencia VARCHAR(100)
 - fecha_movimiento TIMESTAMP
-\`\`\`
+
 
 ### Tabla: alertas_stock
-\`\`\`sql
+
 - id INT PRIMARY KEY
 - producto_id INT FK
 - stock_actual INT
 - stock_minimo INT
 - estado ENUM('pendiente', 'resuelta') DEFAULT 'pendiente'
 - fecha_creacion, fecha_resolucion TIMESTAMP
-\`\`\`
+
 
 ### Tabla: auditoria
-\`\`\`sql
+
 - id INT PRIMARY KEY
 - usuario_id INT FK
 - accion VARCHAR(100) NOT NULL
@@ -168,7 +168,7 @@ inventario_pyme/
 - cambios JSON
 - ip_address VARCHAR(45)
 - fecha TIMESTAMP
-\`\`\`
+
 
 ## 🔐 Medidas de Seguridad Implementadas
 
@@ -223,7 +223,6 @@ inventario_pyme/
 ### Pruebas Unitarias
 - ✅ ProductoTest.php (5 tests)
 - ✅ InventarioTest.php (3 tests)
-- ✅ Cobertura: 85% código crítico
 
 ### Manejo de Errores
 - ✅ Try-Catch en operaciones críticas
@@ -261,7 +260,6 @@ inventario_pyme/
 3. Si no funciona, editar rutas manualmente en vistas
 
 ## 📝 Datos Iniciales en Base de Datos
-
 **Usuarios:**
 - Admin: admin@pyme.com / Admin@123 (rol: admin)
 - Empleado: empleado@pyme.com / Emp@123 (rol: empleado)
@@ -274,12 +272,10 @@ inventario_pyme/
 5. Hub USB-C - SKU-USB-001 ($59.99) - Stock: 25
 
 ## 📚 Documentación
-
 - **SQAP.md** - Plan completo de aseguramiento de calidad
-- **INSTRUCCIONES_INSTALACION.txt** - Guía paso a paso
-- **Este README** - Información general del proyecto
+- **README** - Información general del proyecto
 
-## 🚀 Próximos Pasos
+
 
 1. ✅ Descargar código
 2. ✅ Copiar a htdocs de XAMPP
@@ -288,9 +284,7 @@ inventario_pyme/
 5. ✅ Probar con credenciales de prueba
 6. ⏳ Personalizar según necesidades
 
-## 📞 Soporte
-
-Para errores o dudas:
+## Para errores o dudas:
 1. Revisar archivo `logs/error.log`
 2. Verificar credenciales BD en `config/database.php`
 3. Confirmar que todos los scripts SQL fueron ejecutados
@@ -298,10 +292,10 @@ Para errores o dudas:
 
 ## 📄 Licencia
 
-Proyecto desarrollado con fines educativos - Aseguramiento de Calidad del Software
+Proyecto desarrollado con fines educativos - Aseguramiento de Calidad del Software -CN
 
 ---
 
 **Versión:** 1.0
 **Última actualización:** 2025
-**Desarrollado para:** PYME
+**Desarrollado para:** PYME-UMG
